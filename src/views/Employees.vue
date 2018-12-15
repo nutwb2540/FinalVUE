@@ -1,8 +1,8 @@
 <template>
     <div>
         <h1>Employees</h1>
- <b-table striped hover :items="products" :fields="fields" :per-page="pagesize" :current-page="pageindex"></b-table>
-  <b-pagination size="lg" :total-rows="products.length" v-model="pageindex" :per-page="pagesize">  </b-pagination>
+ <b-table striped hover :items="employees" :fields="fields" :per-page="pagesize" :current-page="pageindex"></b-table>
+  <b-pagination size="lg" :total-rows="employees.length" v-model="pageindex" :per-page="pagesize">  </b-pagination>
     </div>
 </template>
 <script>
@@ -44,7 +44,7 @@ export default {
       .get("https://fsfinal050.herokuapp.com/api/employees/")
       .then(function(response) {
         console.log(response.data);
-        instace.products = response.data.data;
+        instace.employees = response.data.data;
       });
   }
 };
