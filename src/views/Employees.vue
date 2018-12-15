@@ -13,7 +13,7 @@ export default {
   data() {
     return {
       message: "FinalVUE",
-      products: [],
+      employees: [],
       pagesize:5,
       pageindex:1,
       fields: [
